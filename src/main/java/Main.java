@@ -70,6 +70,7 @@ public class Main {
         System.out.println();
         resetProcess(processes);
 
+
         // PRIORITY
         Priority pri = new Priority();
         pri.loadProcesses(processes);

@@ -8,10 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b51e607-7950-479a-8cd0-2e296af43b14" name="Changes" comment="FIXED RR alg">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testSchedulers/PriorityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSchedulers/PriorityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testSchedulers/RRTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSchedulers/RRTest.java" afterDir="false" />
+    <list default="true" id="3b51e607-7950-479a-8cd0-2e296af43b14" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/report/output/avgResp.csv" beforeDir="false" afterPath="$PROJECT_DIR$/report/output/avgResp.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/output/avgTurn.csv" beforeDir="false" afterPath="$PROJECT_DIR$/report/output/avgTurn.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/output/avgWait.csv" beforeDir="false" afterPath="$PROJECT_DIR$/report/output/avgWait.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/output/cpuUtil.csv" beforeDir="false" afterPath="$PROJECT_DIR$/report/output/cpuUtil.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testSchedulers/MLFQTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSchedulers/MLFQTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testSchedulers/MLQTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSchedulers/MLQTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +85,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MLQTest.mlqTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;testSchedulers.MLQTest.mlqTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.MLQTest.mlqTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -134,7 +166,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="RR algorithm" />
