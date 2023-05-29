@@ -1,5 +1,8 @@
 package utilities;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.*;
 
 public class Cpu implements CpuInterface {
@@ -15,6 +18,7 @@ public class Cpu implements CpuInterface {
     private boolean inUse;
 
     private final boolean printInfo;
+    private PrintStream outputStream;
 
 
     public Cpu(){
@@ -28,7 +32,7 @@ public class Cpu implements CpuInterface {
         this.printInfo = false;
     }
 
-    public Cpu(boolean printInfo){
+    public Cpu(boolean printInfo, String name) throws FileNotFoundException {
         this.ioProcesses = new ArrayList<>();
         this.onCpu = null;
         this.readyProcesses = new ArrayList<>();
@@ -37,6 +41,9 @@ public class Cpu implements CpuInterface {
         this.useTime = 0;
         this.time = 0;
         this.printInfo = printInfo;
+        String fileName = name + ".txt";
+        outputStream = new PrintStream(fileName);
+        System.setOut(outputStream);
     }
 
     public int getTime(){
@@ -101,11 +108,19 @@ public class Cpu implements CpuInterface {
             for(int i = 0; i < completedProcesses.size(); i++){
                 completedProcesses.get(i).generatePerformanceStatistics();
             }
+            closeOutputStream();
             return true;
         }
         else{
             return false;
         }
+    }
+
+    public void closeOutputStream(){
+        if(outputStream != null){
+            outputStream.close();
+        }
+
     }
 
     public boolean cpuTick() throws Exception {

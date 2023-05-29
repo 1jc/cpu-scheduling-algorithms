@@ -9,13 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b51e607-7950-479a-8cd0-2e296af43b14" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/report/output/avgResp.csv" beforeDir="false" afterPath="$PROJECT_DIR$/report/output/avgResp.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/output/avgTurn.csv" beforeDir="false" afterPath="$PROJECT_DIR$/report/output/avgTurn.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/output/avgWait.csv" beforeDir="false" afterPath="$PROJECT_DIR$/report/output/avgWait.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/output/cpuUtil.csv" beforeDir="false" afterPath="$PROJECT_DIR$/report/output/cpuUtil.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testSchedulers/MLFQTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSchedulers/MLFQTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testSchedulers/MLQTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSchedulers/MLQTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/schedulers/FCFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/schedulers/FCFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/schedulers/MLFQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/schedulers/MLFQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/schedulers/MLQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/schedulers/MLQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/schedulers/RR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/schedulers/RR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/schedulers/SJF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/schedulers/SJF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/Cpu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

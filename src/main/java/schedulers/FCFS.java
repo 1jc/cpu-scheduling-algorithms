@@ -36,7 +36,7 @@ public class FCFS implements SchedulerInterface {
      */
     @Override
     public void executeProcesses(Boolean contextStream) throws Exception {
-        this.cpu = new Cpu(contextStream);
+        this.cpu = new Cpu(contextStream,"fcfsContextStream");
         cpu.setProcessList(processes);
         while (!cpu.checkCompletion()) {
             cpu.nextProcessToCpuIfIdle();

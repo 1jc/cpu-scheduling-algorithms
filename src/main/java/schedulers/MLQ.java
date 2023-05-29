@@ -65,7 +65,7 @@ public class MLQ implements SchedulerInterface {
 
         //if contextStream we will print snapshots every time onCpu changes
         if(contextStream){
-            this.cpu = new Cpu(true);
+            this.cpu = new Cpu(true,"mlqContextSwitches");
         }
         else{
             this.cpu = new Cpu();

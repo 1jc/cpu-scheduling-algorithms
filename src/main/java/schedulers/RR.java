@@ -40,7 +40,7 @@ public class RR implements SchedulerInterface {
      */
     @Override
     public void executeProcesses(Boolean contextSwitch) throws Exception {
-        cpu = new Cpu();
+        cpu = new Cpu(true,"roundRobinContextSwitching");
 
         // Load the processes into the CPU
         cpu.setProcessList(processes);

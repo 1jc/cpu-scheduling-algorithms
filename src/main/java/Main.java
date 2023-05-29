@@ -1,5 +1,7 @@
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,80 +20,101 @@ public class Main {
         // SHORTEST JOB FIRST (NON PREEMPTIVE)
         SJF sjf = new SJF();
         sjf.loadProcesses(processes);
-        sjf.executeProcesses(false);
+        sjf.executeProcesses(true);
         PerformanceMetricGenerator sjfPMG = sjf.generatePerformanceMetrics();
         populateData(dataForCSV, 0, sjfPMG);
+        PrintStream ps = new PrintStream("sjfNonPreemptiveFinalData.txt");
+        System.setOut(ps);
         System.out.println("SHORTEST JOB FIRST:");
         System.out.println(sjfPMG);
         System.out.println();
+        ps.close();
         resetProcess(processes);
 
         // SHORTEST REMAINING TIME FIRST (PREEMPTIVE)
         SJF srtf = new SJF();
         srtf.loadProcesses(processes);
-        srtf.executeProcessesPreemptive(false);
+        srtf.executeProcessesPreemptive(true);
         PerformanceMetricGenerator srtfPMG = srtf.generatePerformanceMetrics();
         populateData(dataForCSV, 1, srtfPMG);
+        ps = new PrintStream("sjfPreemptiveFinalData.txt");
+        System.setOut(ps);
         System.out.println("SHORTEST REMAINING TIME FIRST:");
         System.out.println(srtfPMG);
         System.out.println();
+        ps.close();
         resetProcess(processes);
 
         // ROUND ROBIN
         RR rr = new RR();
         rr.loadProcesses(processes);
-        rr.executeProcesses(false);
+        rr.executeProcesses(true);
         PerformanceMetricGenerator rrPMG = rr.generatePerformanceMetrics();
         populateData(dataForCSV, 2, rrPMG);
+        ps = new PrintStream("rrFinalData.txt");
+        System.setOut(ps);
         System.out.println("ROUND ROBIN:");
         System.out.println(rrPMG);
         System.out.println();
+        ps.close();
         resetProcess(processes);
 
         // MULTILEVEL QUEUE
         MLQ mlq = new MLQ(5,73);
         mlq.loadProcesses(processes);
-        mlq.executeProcesses(false);
+        mlq.executeProcesses(true);
         PerformanceMetricGenerator mlqPMG = mlq.generatePerformanceMetrics();
         populateData(dataForCSV, 3, mlqPMG);
+        ps = new PrintStream("mlqFinalData.txt");
+        System.setOut(ps);
         System.out.println("MULTILEVEL QUEUE:");
         System.out.println(mlqPMG);
         System.out.println();
+        ps.close();
         resetProcess(processes);
 
         // MULTILEVEL FEEDBACK QUEUE
         MLFQ mlfq = new MLFQ();
         mlfq.loadProcesses(processes);
-        mlfq.executeProcesses(false);
+        mlfq.executeProcesses(true);
         PerformanceMetricGenerator mlfqPMG = mlfq.generatePerformanceMetrics();
         populateData(dataForCSV, 4, mlfqPMG);
+        ps = new PrintStream("mlfqFinalData.txt");
+        System.setOut(ps);
         System.out.println("MULTILEVEL FEEDBACK QUEUE:");
         System.out.println(mlfqPMG);
         System.out.println();
+        ps.close();
         resetProcess(processes);
 
 
         // PRIORITY
         Priority pri = new Priority();
         pri.loadProcesses(processes);
-        pri.executeProcesses(false);
+        pri.executeProcesses(true);
         PerformanceMetricGenerator priPMG = pri.generatePerformanceMetrics();
         populateData(dataForCSV, 5, priPMG);
+        ps = new PrintStream("priorityFinalData.txt");
+        System.setOut(ps);
         System.out.println("PRIORITY:");
         System.out.println(priPMG);
         System.out.println();
+        ps.close();
         resetProcess(processes);
 
 
         //FIRST-COME FIRST SERVED
         FCFS fcfs = new FCFS();
         fcfs.loadProcesses(processes);
-        fcfs.executeProcesses(false);
+        fcfs.executeProcesses(true);
         PerformanceMetricGenerator fcfsPMG = fcfs.generatePerformanceMetrics();
         populateData(dataForCSV, 6, fcfsPMG);
+        ps = new PrintStream("fcfsFinalData.txt");
+        System.setOut(ps);
         System.out.println("FIRST-COME FIRST SERVED:");
         System.out.println(fcfsPMG);
         System.out.println();
+        ps.close();
         resetProcess(processes);
 
 

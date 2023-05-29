@@ -38,7 +38,7 @@ public class SJF implements SchedulerInterface {
      */
     @Override
     public void executeProcesses(Boolean contextStream) throws Exception {
-        this.cpu = new Cpu(contextStream);
+        this.cpu = new Cpu(contextStream,"sjfContextStream");
 
         PriorityQueue<Process> readyQueue = new PriorityQueue<>(Comparator.comparingInt(Process::getActiveProcessTimeRemaining));
         readyQueue.addAll(processes);
@@ -63,7 +63,7 @@ public class SJF implements SchedulerInterface {
      * @param contextStream true if output is to be written to file
      */
     public void executeProcessesPreemptive(Boolean contextStream) throws Exception {
-        this.cpu = new Cpu(contextStream);
+        this.cpu = new Cpu(contextStream,"sjfPreemptiveContextStream");
 
         PriorityQueue<Process> readyQueue = new PriorityQueue<>(Comparator.comparingInt(Process::getActiveProcessTimeRemaining));
         readyQueue.addAll(processes);

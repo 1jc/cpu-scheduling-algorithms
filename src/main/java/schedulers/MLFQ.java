@@ -63,7 +63,7 @@ public class MLFQ implements SchedulerInterface {
             queueOne.add(p);
             queueMap.put(p,0);
         }
-        this.cpu = new Cpu();
+
     }
 
     /**
@@ -72,8 +72,8 @@ public class MLFQ implements SchedulerInterface {
     @Override
     public void executeProcesses(Boolean contextStream) throws Exception {
 
-
         // YOUR ALGORITHM HERE :)
+        this.cpu = new Cpu(contextStream,"mlfqContextStream");
         cpu.setProcessList(this.queueOne);
         cpu.sendToCpuIfEmpty(queueOne.remove(0));
         List<Process> activeQueue = queueOne;
